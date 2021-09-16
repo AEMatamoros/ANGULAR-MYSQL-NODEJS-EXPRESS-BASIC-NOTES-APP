@@ -1,0 +1,14 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+.max-height{
+    height: 100vh;
+}
+
+.rezize-none{
+    resize: none;
+}
+
+.pointer{
+    cursor: pointer;
+}

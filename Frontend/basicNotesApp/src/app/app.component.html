@@ -1,0 +1,16 @@
+<div class="container-fluid max-height">
+  <div class="row d-flex align-items-center h-100">
+    <h1 class="text-center col-md-12">Notes App</h1>
+    <div class="col-md-4 mx-auto my-auto alert-success">
+        <form class="m-1 p-2" [formGroup] = "notesForm">
+            <label for="title" class="form-label" >Note Title</label>
+            <input type="text" name= "title" id = "title" class="form-control" formControlName="title">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="description" id="" cols="30" rows="10" class="form-control rezize-none" formControlName="description"></textarea>
+            <button class="btn btn-success mt-3 form-control" type="button" (click)="save()" [disabled]="!notesForm.valid"> Add Note</button>
+        </form>
+        
+    </div>
+    <app-components-list #listComponent ></app-components-list>
+  </div>
+</div>

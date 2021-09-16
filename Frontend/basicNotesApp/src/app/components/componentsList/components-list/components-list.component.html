@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4  border row m-0" *ngFor="let note of notes; let i =index">
+            <div class="p-2 col-md-2">
+                {{note.ID}}
+            </div>
+            <div class="p-2 col-md-4">
+                {{note.TITLE}}
+            </div>
+            <div class="p-2 col-md-4">
+                {{note.DESCRIPTION}}
+            </div>
+            <div class="p-2 col-md-2">
+                <i class="fas fa-window-close fa-2x text-danger pointer" (click)="deleteNote(note.ID)"></i>
+            </div>
+        </div>
+    </div>
+</div>
