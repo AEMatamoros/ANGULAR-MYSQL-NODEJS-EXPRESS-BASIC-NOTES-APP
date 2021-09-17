@@ -32,7 +32,7 @@ export class NoteServiceService {
   }
 
   puttNote(note){
-    return this.http.put<any>(this.NOTES_URL+`/${note.id}`,note,this.httpOptions);
+    return this.http.put<any>(this.NOTES_URL+`/${note.ID}`,note,this.httpOptions);
   }
 
   deleteNote(id){

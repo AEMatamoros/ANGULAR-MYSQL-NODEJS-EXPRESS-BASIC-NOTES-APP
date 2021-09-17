@@ -22,9 +22,11 @@ router.delete("/:id", async (req , res) => {
 })
 
 router.put("/:id", async (req , res) =>{
+    console.log(req.body)
     const updateNote = await db.query(`
-    UPDATE notes SET TITLE="${req.body.title}",DESCRIPTION="${req.body.description}" WHERE ID= ${req.params.id}
+    UPDATE notes SET TITLE="${req.body.TITLE}",DESCRIPTION="${req.body.DESCRIPTION}" WHERE ID= ${req.params.id}
     `);
+
     if (updateNote.affectedRows==1){
         res.send({status:200});
     }else{
